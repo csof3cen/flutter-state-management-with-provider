@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'presentation/screens/home_screen.dart';
+import 'presentation/screens/home_screen/home_screen.dart';
 import 'package:state_management_with_provider/models/product_model.dart';
 
 void main() {

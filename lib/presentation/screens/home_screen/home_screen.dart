@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'components/selected_items.dart';
-import '../components/bottom_navigation_bar.dart';
+import '../components/selected_items.dart';
+import '../../components/bottom_navigation_bar.dart';
 import 'package:state_management_with_provider/models/product_model.dart';
 
 class HomeScreen extends StatelessWidget {
