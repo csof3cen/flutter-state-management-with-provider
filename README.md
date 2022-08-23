@@ -7,6 +7,16 @@ If you want to understand how it works, please visit the link below.
 
 Please star and contribute to this repo if you like it !
 
+---
+
+With provider, you need to understand 3 concepts:
+
+  - ChangeNotifier
+  - ChangeNotifierProvider
+  - Consumer
+
+---
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
