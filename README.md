@@ -1,6 +1,11 @@
 # state_management_with_provider
 
-A new Flutter project.
+A set of examples that explains you how to manage app states using [provider package](https://pub.dev/packages/provider).
+
+If you want to understand how it works, please visit the link below.
+[State Management Explained, From Flutter Docs](https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple)
+
+Please star and contribute to this repo if you like it !
 
 ## Getting Started
 
