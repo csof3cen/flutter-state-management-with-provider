@@ -17,11 +17,17 @@ With provider, you need to understand 3 concepts:
 
 ---
 
-###### You can run the app tests with the commands below:
+You can run the app tests with the commands below:
+
 `flutter test // All app tests`
+
 `flutter test test/models/product_model_test.dart // Unit tests`
+
 `flutter run test/presentation/home_screen_test.dart // Home screen widget test`
+
 `flutter run test/presentation/checkout_screen_test.dart // Checkout screen widget test`
+
+---
 
 ## Getting Started
 
