@@ -12,10 +12,10 @@ class SelectedItems extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 50),
       width: MediaQuery.of(context).size.width - 20,
-      child: Consumer<ProductModel>(
+      child: Consumer<Product>(
         builder: (context, value, child) {
           List<Widget> selectedItems = [];
-          for (var product in ProductModel.selectedProducts) {
+          for (var product in Product.selectedProducts) {
             selectedItems.add(
               Container(
                 decoration: BoxDecoration(

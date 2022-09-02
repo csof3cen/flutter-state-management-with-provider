@@ -12,10 +12,9 @@ class CheckoutScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Checkout"),
       ),
-      body: Consumer<ProductModel>(
-          builder: (context, ProductModel product, child) {
+      body: Consumer<Product>(builder: (context, Product product, child) {
         double totalPrice = 0;
-        for (var element in ProductModel.selectedProducts) {
+        for (var element in Product.selectedProducts) {
           totalPrice += element.price;
         }
         return Column(

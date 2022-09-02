@@ -5,8 +5,8 @@ import 'package:state_management_with_provider/models/product_model.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider<ProductModel>(
-      create: (context) => ProductModel.empty(),
+    ChangeNotifierProvider<Product>(
+      create: (context) => Product(),
       child: const App(),
     ),
   );

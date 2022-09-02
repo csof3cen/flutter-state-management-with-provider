@@ -21,11 +21,11 @@ class HomeScreen extends StatelessWidget {
           ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
-            itemCount: ProductModel.availableProducts.length,
+            itemCount: Product.availableProducts.length,
             itemBuilder: ((context, index) {
-              var currentProduct = ProductModel.availableProducts[index];
+              var currentProduct = Product.availableProducts[index];
               return Consumer(
-                builder: ((context, ProductModel product, child) {
+                builder: ((context, Product product, child) {
                   return ListTile(
                     title: Text(currentProduct.name),
                     subtitle: Text(
@@ -34,15 +34,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                     trailing: IconButton(
                       onPressed: () {
-                        if (!ProductModel.selectedProducts
+                        if (!Product.selectedProducts
                             .contains(currentProduct)) {
                           product.selectItem(index);
                         } else {
-                          product.removeItem(index);
+                          product.unSelectItem(index);
                         }
                       },
                       icon: Icon(
-                        ProductModel.selectedProducts.contains(currentProduct)
+                        Product.selectedProducts.contains(currentProduct)
                             ? Icons.remove
                             : Icons.add,
                       ),

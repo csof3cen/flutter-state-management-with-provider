@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProductModel extends ChangeNotifier {
-  ProductModel({
-    required this.name,
-    required this.price,
-  });
-
-  ProductModel.empty({
+class Product extends ChangeNotifier {
+  Product({
     this.name = "Unavailable",
     this.price = 0,
   });
@@ -14,17 +9,17 @@ class ProductModel extends ChangeNotifier {
   final String name;
   final double price;
 
-  static List<ProductModel> selectedProducts = [];
+  static List<Product> selectedProducts = [];
 
-  List<ProductModel> get getSelectedProducts => selectedProducts;
+  List<Product> get getSelectedProducts => selectedProducts;
 
-  static List<ProductModel> availableProducts = [
-    ProductModel(name: "T-Shirt", price: 200),
-    ProductModel(name: "Mouse", price: 100),
-    ProductModel(name: "Keyboard", price: 150),
-    ProductModel(name: "Macbook Pro", price: 1000),
-    ProductModel(name: "iPhone 13 Pro", price: 1200),
-    ProductModel(name: "Airpods A10", price: 50),
+  static List<Product> availableProducts = [
+    Product(name: "T-Shirt", price: 200),
+    Product(name: "Mouse", price: 100),
+    Product(name: "Keyboard", price: 150),
+    Product(name: "Macbook Pro", price: 1000),
+    Product(name: "iPhone 13 Pro", price: 1200),
+    Product(name: "Airpods A10", price: 50),
   ];
 
   void selectItem(int id) {
@@ -32,12 +27,13 @@ class ProductModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void removeItem(int id) {
-    selectedProducts.remove(availableProducts[id]);
+  void unSelectItem(int id) {
+    var productToRemove = availableProducts[id];
+    selectedProducts.removeWhere((p) => p.hashCode == productToRemove.hashCode);
     notifyListeners();
   }
 
-  void removeAllProducts() {
+  void unSelectAllItems() {
     selectedProducts.clear();
     notifyListeners();
   }
