@@ -7,7 +7,6 @@ class AppBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Colors.grey[200],
       onTap: (value) {
         if (value == 0) return;
         Navigator.push(

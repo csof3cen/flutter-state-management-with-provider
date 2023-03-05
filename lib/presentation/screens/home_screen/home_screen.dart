@@ -13,12 +13,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter States"),
+        centerTitle: true,
+        title: const Text("Flutter Provider State Management"),
       ),
       bottomNavigationBar: const AppBottomNavigationBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SelectedItems(),
             ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
@@ -35,17 +37,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                       trailing: IconButton(
                         onPressed: () {
-                          if (!Product.selectedProducts
-                              .contains(currentProduct)) {
+                          if (!Product.selectedProducts.contains(currentProduct)) {
                             product.selectItem(index);
                           } else {
                             product.unSelectItem(index);
                           }
                         },
                         icon: Icon(
-                          Product.selectedProducts.contains(currentProduct)
-                              ? Icons.remove
-                              : Icons.add,
+                          Product.selectedProducts.contains(currentProduct) ? Icons.remove : Icons.add,
                         ),
                       ),
                     );
@@ -53,7 +52,6 @@ class HomeScreen extends StatelessWidget {
                 );
               }),
             ),
-            const SelectedItems(),
           ],
         ),
       ),

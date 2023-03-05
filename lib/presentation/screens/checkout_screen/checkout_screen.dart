@@ -24,7 +24,7 @@ class CheckoutScreen extends StatelessWidget {
               child: Text(
                 "\$$totalPrice",
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ),
             const SelectedItems(),
@@ -32,7 +32,7 @@ class CheckoutScreen extends StatelessWidget {
             Center(
               child: Container(
                 margin: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).padding.bottom,
+                  bottom: MediaQuery.of(context).padding.bottom + 20,
                 ),
                 width: MediaQuery.of(context).size.width - 50,
                 child: ElevatedButton(
